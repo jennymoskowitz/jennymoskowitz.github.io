@@ -28,7 +28,8 @@ h1{
 h2{
 	font-size: 2em;
 	text-align: center;
-	margin-bottom: 30px; 
+	margin-bottom: 30px;
+	font-family: 'Itim', cursive;
 
 }
 
@@ -79,32 +80,30 @@ img{
     margin: 10px;
 }
 
-
 .about{
-	align-self: center;
-	display: grid;
-	grid-template-columns: auto auto;
-	grid-template-rows: auto auto;
-	font-size: 1.2em;
+	display: flex;
+	flex-direction: column;
 }
 
-.about p:first-child, .about p:nth-child(4){
+.about p:nth-child(odd){
 	background-color: black;
 	color: white;
+	text-align: center;
 }
 
-.about p:nth-child(2), .about p:nth-child(3){
+.about p:nth-child(even){
 	background-color: white;
+	color:black;
 }
 
 .work{
-	display: grid;
-	grid-template-columns: auto auto;
-	grid-template-rows: auto auto;
+	display: flex;
+	flex-direction: column;
 }
 
 .work p:first-child{
 	background-color: white;
+	color: black;
 }
 
 .work p:nth-child(2){
@@ -112,20 +111,21 @@ img{
 	color: white;
 }
 
-/* .leadership p:first-child{
+.interests p:first-child{
+	background-color: black;
+	color: white;
+}
+
+.interests p:nth-child(2){
 	background-color: white;
 }
 
-.leadership p:nth-child(3){
-	background-color: black;
-	color: white;
-} */
+.gallery{
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto auto auto auto auto;
+}
 
-
-/* .leadership p:last-child{
-	background-color: black;
-	color: white;
-} */
 
 .leadership p{
 	font-size: 30px;
@@ -146,4 +146,48 @@ footer{
 	bottom: 0px;
 	left: 0px;
 	width: 100%;
+}
+
+@media screen and (min-width: 850px){
+	.about{
+		align-self: center;
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-template-rows: auto auto;
+		font-size: 1.2em;
+	}
+	
+	.about p:first-child, .about p:nth-child(4){
+		background-color: black;
+		color: white;
+		text-align: center;
+	}
+	
+	.about p:nth-child(2), .about p:nth-child(3){
+		background-color: white;
+		color: black;
+	}
+	
+	.work{
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-template-rows: auto auto;
+	}
+	
+	.work p:first-child{
+		background-color: white;
+		color: black;
+	}
+	
+	.work p:nth-child(2){
+		background-color: black;
+		color: white;
+	}
+
+	.gallery{
+		display: grid;
+		grid-template-columns: auto auto auto auto auto auto;
+		grid-template-rows: auto auto;
+	}
+
 }
