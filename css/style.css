@@ -11,8 +11,24 @@ header{
 .nav_links{
 	display: flex;
 	flex-direction: row;
+}
+
+.current{
+	background-color: white;
+	text-decoration: underline;
+	font-size: 1.5em;
 
 }
+
+@-webkit-keyframes logo{
+	from {width: 25px;}
+	to {width: 420px;}
+}
+  
+@keyframes logo{
+	from {width: 25px;}
+	to {width: 420px;}
+  } 
 
 h1{
 	display: block; 
@@ -30,6 +46,7 @@ h2{
 	text-align: center;
 	margin-bottom: 30px;
 	font-family: 'Itim', cursive;
+	animation: logo 3s;
 
 }
 
@@ -148,7 +165,10 @@ footer{
 	width: 100%;
 }
 
-@media screen and (min-width: 850px){
+
+ 
+
+@media screen and (min-width: 1000px){
 	.about{
 		align-self: center;
 		display: grid;
@@ -191,3 +211,9 @@ footer{
 	}
 
 }
+
+@media (prefers-reduced-motion:reduce) {
+	h2{
+	  animation: none;
+   }
+  }
