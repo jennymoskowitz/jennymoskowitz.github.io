@@ -1,16 +1,21 @@
 
-
+/* All Pages */
 header{
 	display: flex;
 	flex-direction: column;
+	width: 100%;
 	justify-content: center;
 	align-items: center;
 }
 
+nav{
+	width: 100%;
+}
 
 .nav_links{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	min-width: 100%;
 }
 
 .current{
@@ -53,28 +58,14 @@ h2{
 nav ul li{
 	background-color:pink;
 	padding:10px;
-	width:50%;
-	border:1px solid black;
-}
-
-nav ul li:visited{
-	background-color: green;
-	padding:10px;
-	width:50%;
-	border:1px solid black;
-}
-
-nav ul li:hover{
-	background-color: lightblue;
-	padding:10px;
-	width:50%;
+	width: 100%;
 	border:1px solid black;
 }
 
 nav ul li:active{
 	background-color: purple;
 	padding:10px;
-	width:50%;
+	width: 100%;
 	border:1px solid black;
 }
 
@@ -97,9 +88,22 @@ img{
     margin: 10px;
 }
 
+footer{
+	color: black;
+	text-align: center;
+	padding-top: 30px;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+}
+
+/* About */
+
 .about{
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-rows: auto auto auto auto;
+	padding-top: 20px;
 }
 
 .about p:nth-child(odd){
@@ -112,6 +116,53 @@ img{
 	background-color: white;
 	color:black;
 }
+
+.flip-card {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: transparent;
+	width: 300px;
+	height: 300px;
+	border: 1px solid #f1f1f1;
+	perspective: 1000px;
+
+  }
+  
+  .flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; 
+	backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+	background-color: white;
+	color: black;
+  }
+  
+  
+  .flip-card-back {
+	background-color: pink;
+	color: black;
+	transform: rotateY(180deg);
+  }
+
+/* Work */
 
 .work{
 	display: flex;
@@ -128,6 +179,41 @@ img{
 	color: white;
 }
 
+/* Leadership */
+
+.leadership p{
+	font-size: 30px;
+	text-align: center;
+}
+
+.img, .img1{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.paragraph{
+	height:1000px;
+	background-color:grey;
+	font-size:36px;
+	overflow: visible;
+}
+.parallax {
+	/* The image used */
+	
+	background-image: url("../imgs/parallax.png");
+  
+	/* Set a specific height */
+	min-height: 500px; 
+  
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+
+/* Interests */
+
 .interests p:first-child{
 	background-color: black;
 	color: white;
@@ -141,34 +227,31 @@ img{
 	display: grid;
 	grid-template-columns: auto auto;
 	grid-template-rows: auto auto auto auto auto auto;
+	filter: drop-shadow(8px 8px 8px grey) opacity(85%);
 }
 
-
-.leadership p{
-	font-size: 30px;
-	text-align: center;
+/* Tablet */
+@media screen and (min-width: 600px){
+.nav_links{
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto;
+}
+.parallax{
+	display: none;
+}
+.paragraph{
+	background-color: thistle;
+}
 }
 
-.img, .img1{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-}
-footer{
-	background-color: black;
-	color: white;
-	text-align: center;
-	padding-top: 30px;
-	position: fixed;
-	bottom: 0px;
-	left: 0px;
-	width: 100%;
-}
+/* Screen */
+@media screen and (min-width: 850px){
+	.nav_links{
+		display: flex;
+		flex-direction: row;
+	}
 
-
- 
-
-@media screen and (min-width: 1000px){
 	.about{
 		align-self: center;
 		display: grid;
@@ -204,6 +287,7 @@ footer{
 		color: white;
 	}
 
+
 	.gallery{
 		display: grid;
 		grid-template-columns: auto auto auto auto auto auto;
@@ -212,8 +296,13 @@ footer{
 
 }
 
+
+
+/* Reduce Motion */
+
 @media (prefers-reduced-motion:reduce) {
 	h2{
 	  animation: none;
    }
   }
+
