@@ -162,6 +162,7 @@ footer{
 	transform: rotateY(180deg);
   }
 
+
 /* Work */
 
 .work{
@@ -191,26 +192,29 @@ footer{
 	flex-direction: row;
 	justify-content: space-around;
 }
+
 .paragraph{
-	height:1000px;
 	background-color:grey;
 	font-size:36px;
-	overflow: visible;
+	overflow: auto;
 }
 .parallax {
-	/* The image used */
 	
 	background-image: url("../imgs/parallax.png");
   
-	/* Set a specific height */
 	min-height: 500px; 
   
-	/* Create the parallax scrolling effect */
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
   }
+/* .parallax{
+	display: none;
+}
+.paragraph{
+	background-color: thistle;
+} */
 
 /* Interests */
 
@@ -242,6 +246,12 @@ footer{
 }
 .paragraph{
 	background-color: thistle;
+}
+
+.gallery{
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto auto auto;
 }
 }
 
@@ -287,6 +297,16 @@ footer{
 		color: white;
 	}
 
+	.paragraph{
+		background-color:grey;
+		font-size:36px;
+	}
+
+	.parallax {
+		
+		display: block;
+	  }
+	
 
 	.gallery{
 		display: grid;
