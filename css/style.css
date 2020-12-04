@@ -90,7 +90,6 @@ footer{
 	height: 50px;
 	left: 0px;
 	width: 100%;
-	/* font-size: 2.5em; */
 }
 
 /* About */
@@ -157,7 +156,43 @@ footer{
 	transform: rotateY(180deg);
   }
 
+  form{
+	  padding: 20px;
+	  margin-top: 20px;
+	  padding-bottom: 30px;
+	  font-family: 'Itim', cursive;
+	  font-size: 1em;
+	  background-color: white;
+  }
 
+  legend{
+	  font-size: 1.5em;
+	  text-decoration: wavy;
+  }
+  #msg{
+	width: 100%;
+	height: 150px;
+	padding: 12px 20px;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	background-color: #f8f8f8;
+	resize: none;
+  }
+
+  input[type=submit]{
+	  background-color: black;
+	  color: white;
+	  text-transform: uppercase;
+  }
+
+  .row:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+
+  
 /* Work */
 
 .work{
@@ -231,6 +266,26 @@ footer{
 	grid-template-columns: auto auto;
 	grid-template-rows: auto auto;
 }
+
+label {
+	padding: 12px 12px 12px 0;
+	display: inline-block;
+  }
+  
+  
+.col-25 {
+	float: left;
+	width: 25%;
+	margin-top: 6px;
+  }
+  
+.col-75 {
+	float: left;
+	width: 75%;
+	margin-top: 6px;
+  }
+  
+
 .parallax{
 	display: none;
 }
@@ -270,6 +325,7 @@ footer{
 		background-color: white;
 		color: black;
 	}
+	
 	
 	.work{
 		display: grid;

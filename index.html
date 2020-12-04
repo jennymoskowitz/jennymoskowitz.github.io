@@ -64,25 +64,48 @@
 </div>
 <form action="https://formspree.io/f/xrgoadyk" method="POST">
 	<fieldset>
-	  <legend>Contact Me!</legend>
-  
-	  <label for="name_id">Name</label>
-	  <input type="text" placeholder="Enter Your Name" id = "name_id" name="name" required>
-  
-	  <label for="email_id">Email</label>
-	  <input type="email" placeholder="Enter Your Email" id = "email_id" name="email" required>
-  
-	  <label for="phone_id">Phone Number</label>
-	  <input type="tel" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-  
-  
-	  <label for="msg">Message</label>
-	  <textarea placeholder="Enter your message" id = "msg" name="mesg" required></textarea><br>
-  
-	  <input type="checkbox" checked="checked" name="remember" id = "cBox"> 
-	  <label for ="cBox">Remember me</label>
-  
-	  <input type="submit" value = "Contact Me">
+	  <legend><strong>Contact Me!</strong></legend>
+
+	  <div class="row">
+		<div class="col-25">
+			<label for="name_id"><strong>Name:</strong></label>
+		</div>
+	  	<div class="col-75"></div>
+	  		<input type="text" placeholder="Enter Your Name" id = "name_id" name="name" required>
+		</div>
+	</div>
+
+	<div class="row">
+	  <div class="col-25">
+	  	<label for="email_id"><strong>Email:</strong></label>
+		</div>
+		<div class="col-75">
+	 	 <input type="email" placeholder="Enter Your Email" id = "email_id" name="email" required>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-25">
+	  		<label for="phone_id"><strong>Phone Number:</strong></label>
+		</div>
+		<div class="col-75">
+	  		<input type="tel" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-25">
+	  		<label for="msg"><strong>Message:</strong></label>
+		</div>
+		<div class="col-75">
+	 	 <textarea placeholder="Enter your message" id = "msg" name="mesg" required></textarea><br>
+		</div>
+	</div>
+	
+	<div class="row">
+	  <input type="submit" value = "Submit">
+	</div>
+
 	</fieldset>
    </form>
 </main>
