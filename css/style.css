@@ -200,12 +200,14 @@ footer{
 	flex-direction: column;
 }
 
-.work p:first-child{
+.work p:nth-child(odd){
+	padding: 5px;
 	background-color: white;
 	color: black;
 }
 
 .work p:nth-child(2){
+	padding: 5px;
 	background-color: black;
 	color: white;
 }
@@ -329,11 +331,11 @@ label {
 	
 	.work{
 		display: grid;
-		grid-template-columns: auto auto;
-		grid-template-rows: auto auto;
+		grid-template-columns: auto auto auto;
+		grid-template-rows: auto auto auto;
 	}
 	
-	.work p:first-child{
+	.work p:nth-child(odd){
 		background-color: white;
 		color: black;
 	}
