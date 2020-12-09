@@ -1,6 +1,10 @@
 
 
 /* All Pages */
+a:-webkit-any-link{
+	color: #910491;
+}
+
 header{
 	display: flex;
 	flex-direction: column;
@@ -226,7 +230,7 @@ footer{
 }
 
 .paragraph{
-	background-color:grey;
+	background-color:hsla(0, 0%, 94%, 0.733);
 	font-size:36px;
 	overflow: auto;
 }
@@ -346,7 +350,7 @@ label {
 	}
 
 	.paragraph{
-		background-color:grey;
+		background-color:hsla(0, 0%, 94%, 0.733);
 		font-size:36px;
 	}
 
